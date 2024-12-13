@@ -90,4 +90,52 @@ public class ArrayAlgorithms {
         }
     }
     
+    public static boolean[] isFreezing(int[] tempList) {
+        boolean[] isFreeze = new boolean[tempList.length];
+        for(int i = 0; i < tempList.length; i++) {
+            if(tempList[i] <= 32) {
+                isFreeze[i] = true;
+            } else {
+                isFreeze[i] = false;
+            }
+        }
+        return isFreeze;
+    }
+    
+    public static void shiftLeft(int[] numList) {
+        int temp = numList[0];
+        for(int i = 0; i < numList.length - 1; i++) {
+            numList[i] = numList[i + 1];
+        }
+        numList[numList.length - 1] = temp;
+    }
+   
+    public static void shiftRight(int[] numList) {
+        int temp = numList[numList.length - 1];
+        for(int i = numList.length - 1; i > 0; i--) {
+            numList[i] = numList[i - 1];
+        }
+        numList[0] = temp;
+    }
+
+    public static void reverse(int[] numList) {
+        int[] tempList = new int[numList.length];
+        int len = numList.length - 1;
+        for(int i = 0; i < numList.length; i++) {
+            tempList[i] = numList[len - i];  
+        }
+        for(int i = 0; i < numList.length; i++) {
+            numList[i] = tempList[i];
+        }
+    }
+    
+    /*public static void reverse(int[] numList) {
+        for(int i = 0; i < numList.length / 2; i++) {
+            int temp = numList[i];
+            numList[i] = numList[numList.length - (1 + i)];
+            numList[numList.length - (1 + i)] = temp;
+        }
+    } */
+    
+    
 }
