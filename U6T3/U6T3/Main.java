@@ -2,12 +2,12 @@ package U6T3;
 
 public class Main {
     public static void main(String[] args) {
-        int[] grades = {75, 80, 82, 78, 92};
-        for(int i = 0; i < grades.length; i++) {
-            grades[i] = grades[i] + 5;
-        }        
-        for(int grade: grades) {
-            System.out.println(grade);
-        }                                                  
+        String[] strings9 = {"HELlo", "Halo", "WHAT!", "Adam", "what", "booyAH", "WHY?", "for"};
+        ArrayAlgorithms.makeUppercase(strings9);
+        for (String str : strings9) {
+            System.out.print(str + " ");
+        }
+        System.out.println();
+    
     }
 }
